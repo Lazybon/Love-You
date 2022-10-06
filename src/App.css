@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Caveat';
+  src: local('Caveat'), url('src/assets/Caveat-Medium.ttf') format('opentype');
+  font-weight: bold;
+}
+
+#root {
+  font-family: Caveat;
+}
+
+.app {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heart-shape {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.heart-shape:before,
+.heart-shape:after {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.heart-shape::before {
+  bottom: 0px;
+  left: -100px;
+}
+
+.heart-shape::after {
+  bottom: 0px;
+  left: 0;
+  top: -100px;
+}
+
+.heart-wrapper {
+  position: relative;
+}
+
+.heart-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -180%);
+  white-space: nowrap;
+  font-size: 40px;
+  z-index: 2;
+}
